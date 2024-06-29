@@ -1,193 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %} Projects {% endblock %}
+{% block title %}Projects{% endblock %}
 
 {% block content %}
 <section class="section">
     <h1 class="title">Projects</h1>
 
-    <div class="grid is-col-min-12 gap-4">
-        <div class="cell">
-            <a href="http://www.google.com" class="card-link">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            <img src="./static/img/image.png" alt="Project image change this">
-                        </figure>
-                    </div>
-                    <div class="media-content p-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title">Project Name</p>
-                                <p class="subtitle is-6">Technologies, Used</p>
-                            </div>
-                            <div class="column" align="right">
-                                <a href="http://github.com" class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content px-3 pb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
+    <div class="columns is-multiline">
+        {% for project in projects %}
+        <div class="column is-one-third">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        {{ project.title }}
+                    </p>
+                    <p class="subtitle">
+                        {{ project.description }}
+                    </p>
                 </div>
-            </a>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            View on
+                            <a href="{{ project.github_url }}">GitHub</a>
+                        </span>
+                    </p>
+                    <p class="card-footer-item">
+                        <span>
+                            Share on
+                            <a href="#">Facebook</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
         </div>
-        <div class="cell">
-            <a href="http://www.google.com" class="card-link">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            <img src="./static/img/image.png" alt="Project image change this">
-                        </figure>
-                    </div>
-                    <div class="media-content p-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title">Project Name</p>
-                                <p class="subtitle is-6">Technologies, Used, Used, Used, Technologies</p>
-                            </div>
-                            <div class="column" align="right">
-                                <a href="http://github.com" class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content px-3 pb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cell">
-            <a href="http://www.google.com" class="card-link">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            <img src="./static/img/image.png" alt="Project image change this">
-                        </figure>
-                    </div>
-                    <div class="media-content p-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title">Project Name</p>
-                                <p class="subtitle is-6">Technologies, Used</p>
-                            </div>
-                            <div class="column" align="right">
-                                <a href="http://github.com" class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content px-3 pb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cell">
-            <a href="http://www.google.com" class="card-link">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            <img src="./static/img/image.png" alt="Project image change this">
-                        </figure>
-                    </div>
-                    <div class="media-content p-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title">Project Name</p>
-                                <p class="subtitle is-6">Technologies, Used</p>
-                            </div>
-                            <div class="column" align="right">
-                                <a href="http://github.com" class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content px-3 pb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cell">
-            <a href="http://www.google.com" class="card-link">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            <img src="./static/img/image.png" alt="Project image change this">
-                        </figure>
-                    </div>
-                    <div class="media-content p-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title">Project Name</p>
-                                <p class="subtitle is-6">Technologies, Used</p>
-                            </div>
-                            <div class="column" align="right">
-                                <a href="http://github.com" class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content px-3 pb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cell">
-            <a href="http://www.google.com" class="card-link">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4x3">
-                            <img src="./static/img/image.png" alt="Project image change this">
-                        </figure>
-                    </div>
-                    <div class="media-content p-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="title">Project Name</p>
-                                <p class="subtitle is-6">Technologies, Used</p>
-                            </div>
-                            <div class="column" align="right">
-                                <a href="http://github.com" class="button">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content px-3 pb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
-
 </section>
 {% endblock %}
