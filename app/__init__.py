@@ -8,7 +8,22 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), active_page = 'home', mapsApiKey=os.getenv("MAPS_API_KEY"))
+
+    # locations = [
+    #     [[34.0708, -84.2772], "Alpharetta, GA, USA - Hometown"],
+    #     [[40.5804, -74.2851], "Avenel, NJ, USA - Previously Lived"],
+    #     [[1.3521, 103.8198], "Singapore - Previously Lived"],
+    #     [[13.0843, 80.2705], "Chennai, India - Birthplace"],
+    #     [[33.7756, -84.3963], "Georgia Tech - Pursuing BS in CS"]
+    # ]
+    locations = [
+        [34.0708, -84.2772, "Alpharetta, GA, USA - Hometown"],
+        [40.5804, -74.2851, "Avenel, NJ, USA - Previously Lived"],
+        [1.3521, 103.8198, "Singapore - Previously Lived"],
+        [13.0843, 80.2705, "Chennai, India - Birthplace"],
+        [33.7756, -84.3963, "Georgia Tech - Pursuing BS in CS"]
+    ]
+    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), active_page = 'home', mapsApiKey=os.getenv("MAPS_API_KEY"), locations=locations)
 
 @app.route('/about')
 def about():
@@ -18,11 +33,11 @@ def about():
         {"name": "Eating out", "description": "Trying different restaurant cuisines", "img_url": url_for('static', filename='img/restaurant.jpg')},
         {"name": "Programing", "description": "Learning new programing concepts!", "img_url": url_for('static', filename='img/Programing.jpg')},
     ]
-    
+
     # If you prefer a separate loop for adding URLs, use the following:
     # for hobby in hobbies:
     #     hobby['img_url'] = url_for('static', filename='img/' + hobby['img'])
-    
+
     return render_template('about.html', title="About Me", active_page = 'about', hobbies = hobbies)
 
 @app.route('/work')
@@ -52,8 +67,8 @@ def work():
             "link": "http://www.google.com",
             "img_url": url_for('static', filename='img/logo.jpg')
         }
-    ] 
-    
+    ]
+
     return render_template('work.html', title="Work Experience", active_page = 'work', work_experiences=work_experiences)
 
 @app.route('/projects')
@@ -76,7 +91,7 @@ def projects():
             "github_url": "https://github.com/jimmyMsh/Data-Structures/tree/master/MusicPlaylist"
         }
     ]
-    
+
     return render_template('projects.html', title="projects", active_page = 'projects', projects = projects)
 
 @app.route('/contact')
