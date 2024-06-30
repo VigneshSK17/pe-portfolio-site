@@ -9,13 +9,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    # locations = [
-    #     [[34.0708, -84.2772], "Alpharetta, GA, USA - Hometown"],
-    #     [[40.5804, -74.2851], "Avenel, NJ, USA - Previously Lived"],
-    #     [[1.3521, 103.8198], "Singapore - Previously Lived"],
-    #     [[13.0843, 80.2705], "Chennai, India - Birthplace"],
-    #     [[33.7756, -84.3963], "Georgia Tech - Pursuing BS in CS"]
-    # ]
+    # Formatted as [latitude, longitude, description]
+    # latitude: S is negative, longitude: W is negative
     locations = [
         [34.0708, -84.2772, "Alpharetta, GA, USA - Hometown"],
         [40.5804, -74.2851, "Avenel, NJ, USA - Previously Lived"],
@@ -23,6 +18,7 @@ def index():
         [13.0843, 80.2705, "Chennai, India - Birthplace"],
         [33.7756, -84.3963, "Georgia Tech - Pursuing BS in CS"]
     ]
+
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), active_page = 'home', mapsApiKey=os.getenv("MAPS_API_KEY"), locations=locations)
 
 @app.route('/about')
