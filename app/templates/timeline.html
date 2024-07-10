@@ -48,4 +48,34 @@ content %}
     </form>
 </section>
 
+<section class="section">
+    <h1 class="title is-4">Timeline</h1>
+    <div class="timeline" />
+</section>
+
+<script>
+    fetch("/api/timeline_post")
+        .then((response) => response.json())
+        .then((data) => {
+            let timeline = data.timeline_posts;
+            let timelineHTML = "";
+            timeline.forEach((post) => {
+                timelineHTML += `
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title is-5">${post.name}</p>
+                                <p class="subtitle is-6">
+                                    ${post.email} | ${post.created_at}
+                                </p>
+                                <p>${post.content}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+            });
+            document.querySelector(".timeline").innerHTML = timelineHTML;
+        });
+</script>
+
 {% endblock %}
