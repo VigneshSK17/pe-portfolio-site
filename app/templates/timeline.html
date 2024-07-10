@@ -5,9 +5,14 @@ content %}
     <h1 class="title">Timeline</h1>
     <h1 class="title is-4">Add To Timeline</h1>
     <form
+	name="timeline_form"
         action="/api/timeline_post"
         method="post"
-        onsubmit="setTimeout(function(){window.location.reload();},10);"
+	target="hiddenFrame"
+        onsubmit="
+		document.timeline_form.submit();
+		setTimeout(function(){window.location.reload();},10);
+	"
     >
         <div class="field">
             <label class="label">Name</label>
@@ -46,6 +51,7 @@ content %}
             <button class="button is-primary" type="submit">Save</button>
         </div>
     </form>
+    <iframe name="hiddenFrame" style="display:none"></iframe>
 </section>
 
 <section class="section">

@@ -2,7 +2,6 @@
 
 tmux kill-server
 
-cd pe-portfolio-site
 git fetch && git reset origin/main --hard
 
 source env/bin/activate
