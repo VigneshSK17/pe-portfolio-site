@@ -129,6 +129,11 @@ def projects():
 def contact():
     return render_template('contact.html', title="Contact", active_page = 'contact')
 
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title='Timeline', active_page='timeline')
+
+
 @app.route('/api/timeline_post')
 def get_time_line_post():
     return {
