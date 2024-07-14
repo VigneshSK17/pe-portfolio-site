@@ -64,28 +64,32 @@ def about():
 def work():
     work_experiences = [
         {
-            "role": "Role Name",
-            "company": "Company Name",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "role": "Production Engineer Intern",
+            "company": "Meta & Major League Hacking",
+            "description": "Gained valuable hands-on experience in Software Engineering (SWE) and Site Reliability Engineering (SRE) principles. Developed real-world projects under the guidance of Meta engineers and learned from industry experts through a comprehensive 12-week curriculum. Collaborated with a team of interns to build a robust portfolio, incorporating industry best practices and services.",
             "dates": "June 2024 - Present",
-            "link": "http://www.google.com",
-            "img_url": url_for('static', filename='img/logo.jpg')
+            "img_url": url_for('static', filename='img/work/mlh-fellowship.png')
         },
         {
-            "role": "Role Name",
-            "company": "Company Name",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "dates": "June 2024 - Present",
-            "link": "http://www.google.com",
-            "img_url": url_for('static', filename='img/logo.jpg')
+            "role": "Machine Learning Research Intern",
+            "company": "Fung Group",
+            "description": "Implemented a variant of the SZ3 framework for data compression, achieving a 50x reduction with minimal error. Currently developing a Graph Neural Network for sub-second volumetric data compression with dimensionality reduction. Collaborated on designing cutting-edge ML models for quantum chemistry research.",
+            "dates": "September 2023 - Present",
+            "img_url": url_for('static', filename='img/work/fung-group.png')
         },
         {
-            "role": "Role Name",
-            "company": "Company Name",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "dates": "June 2024 - Present",
-            "link": "http://www.google.com",
-            "img_url": url_for('static', filename='img/logo.jpg')
+            "role": "Robotics Engineer Intern",
+            "company": "VIP - Automotive LIDAR",
+            "description": "Led a team of 4 interns in migrating from ROS to ROS2, facilitating rewrites of custom dependencies. Successfully presented a technical proposal for the migration to senior engineers. Leveraged multi-threading capabilities of ROS2 to achieve a 4x improvement in path planning computations utilizing LIDAR data.",
+            "dates": "August 2023 - Present",
+            "img_url": url_for('static', filename='img/work/vip.png')
+        },
+        {
+            "role": "Software Engineer Intern",
+            "company": "System Technology Works",
+            "description": "Designed and implemented over 10 functionalities for the robot, including grasping and a bipedal walking algorithm. Enhanced Zeus2Q's capabilities by integrating the NVIDIA Riva SDK for real-time conversational AI using industry-leading large language models (LLMs). Developed technical documentation for Zeus2Q's Python-based interfacing API through documentation videos.",
+            "dates": "January 2023 - May 2023",
+            "img_url": url_for('static', filename='img/work/stw.png')
         }
     ]
 
