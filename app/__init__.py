@@ -116,14 +116,19 @@ def projects():
             "github_url": "https://github.com/VigneshSK17/cubimer"
         },
         {
-            "title": "Personal Website",
-            "description": "Engineered and deployed a sophisticated personal website that serves as a portfolio showcasing my software engineering abilities and web development expertise. Key features include interactive elements using DOM, CSS animations, and asynchronous JavaScript for real-time functionality. Integrated LinkedIn, GitHub, and Calendly for enhanced professional networking and scheduling.",
-            "github_url": "https://jimmymishan.com/"
+            "title": "Unwrappd",
+            "tech": ", ".join(["Java, Firebase, Firestore, Android, Java, Spotify API"]),
+            "description": "Unwrappd allows users to generate and save their Spotify listening statistics throughout the year. The project utilized the Spotify API for data retrieval and Firebase for user authentication and cloud storage. Agile development methodologies, specifically Scrum, were employed to manage meetings, delegate tasks, and ensure efficient workflow within weekly sprints.",
+            "url": "https://zghazanfar922.wixsite.com/unwrappd",
+            "img_url": url_for('static', filename='img/projects/unwrappd.png'),
+            "github_url": "https://github.com/VigneshSK17/unwrappd"
         },
         {
-            "title": "Music Playlist Application",
-            "description": "Created a Java application replicating streaming service operations with various features: Managed song sequences using circular linked lists for playlist navigation. Automated song library generation from CSV files for user-driven playlist customization. Implemented playlist manipulation capabilities, including merge, reverse, and shuffle functions, optimized by song popularity metrics to demonstrate intricate data structure utilization.",
-            "github_url": "https://github.com/jimmyMsh/Data-Structures/tree/master/MusicPlaylist"
+            "title": "CLI Shortener",
+            "tech": ", ".join(["Rust, MySQL, SQLx, Axum"]),
+            "description": "A highly efficient link shortening service capable of generating greater than 500 million unique shortened URLs. Ensures reliable storage of links by utilizing a local SQL database and interfacing with it using the SQLx library. Provides a user-friendly CLI to allow for multiple calls to the link shortening server simultaneously.",
+            "url": "https://github.com/VigneshSK17/cli_shortener",
+            "github_url": "https://github.com/VigneshSK17/cli_shortener"
         }
     ]
 
