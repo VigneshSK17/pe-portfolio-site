@@ -64,28 +64,32 @@ def about():
 def work():
     work_experiences = [
         {
-            "role": "Role Name",
-            "company": "Company Name",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "role": "Production Engineer Intern",
+            "company": "Meta & Major League Hacking",
+            "description": "Gained valuable hands-on experience in Software Engineering (SWE) and Site Reliability Engineering (SRE) principles. Developed real-world projects under the guidance of Meta engineers and learned from industry experts through a comprehensive 12-week curriculum. Collaborated with a team of interns to build a robust portfolio, incorporating industry best practices and services.",
             "dates": "June 2024 - Present",
-            "link": "http://www.google.com",
-            "img_url": url_for('static', filename='img/logo.jpg')
+            "img_url": url_for('static', filename='img/work/mlh-fellowship.png')
         },
         {
-            "role": "Role Name",
-            "company": "Company Name",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "dates": "June 2024 - Present",
-            "link": "http://www.google.com",
-            "img_url": url_for('static', filename='img/logo.jpg')
+            "role": "Machine Learning Research Intern",
+            "company": "Fung Group",
+            "description": "Implemented a variant of the SZ3 framework for data compression, achieving a 50x reduction with minimal error. Currently developing a Graph Neural Network for sub-second volumetric data compression with dimensionality reduction. Collaborated on designing cutting-edge ML models for quantum chemistry research.",
+            "dates": "September 2023 - Present",
+            "img_url": url_for('static', filename='img/work/fung-group.png')
         },
         {
-            "role": "Role Name",
-            "company": "Company Name",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "dates": "June 2024 - Present",
-            "link": "http://www.google.com",
-            "img_url": url_for('static', filename='img/logo.jpg')
+            "role": "Robotics Engineer Intern",
+            "company": "VIP - Automotive LIDAR",
+            "description": "Led a team of 4 interns in migrating from ROS to ROS2, facilitating rewrites of custom dependencies. Successfully presented a technical proposal for the migration to senior engineers. Leveraged multi-threading capabilities of ROS2 to achieve a 4x improvement in path planning computations utilizing LIDAR data.",
+            "dates": "August 2023 - Present",
+            "img_url": url_for('static', filename='img/work/vip.png')
+        },
+        {
+            "role": "Software Engineer Intern",
+            "company": "System Technology Works",
+            "description": "Designed and implemented over 10 functionalities for the robot, including grasping and a bipedal walking algorithm. Enhanced Zeus2Q's capabilities by integrating the NVIDIA Riva SDK for real-time conversational AI using industry-leading large language models (LLMs). Developed technical documentation for Zeus2Q's Python-based interfacing API through documentation videos.",
+            "dates": "January 2023 - May 2023",
+            "img_url": url_for('static', filename='img/work/stw.png')
         }
     ]
 
@@ -112,14 +116,19 @@ def projects():
             "github_url": "https://github.com/VigneshSK17/cubimer"
         },
         {
-            "title": "Personal Website",
-            "description": "Engineered and deployed a sophisticated personal website that serves as a portfolio showcasing my software engineering abilities and web development expertise. Key features include interactive elements using DOM, CSS animations, and asynchronous JavaScript for real-time functionality. Integrated LinkedIn, GitHub, and Calendly for enhanced professional networking and scheduling.",
-            "github_url": "https://jimmymishan.com/"
+            "title": "Unwrappd",
+            "tech": ", ".join(["Java, Firebase, Firestore, Android, Java, Spotify API"]),
+            "description": "Unwrappd allows users to generate and save their Spotify listening statistics throughout the year. The project utilized the Spotify API for data retrieval and Firebase for user authentication and cloud storage. Agile development methodologies, specifically Scrum, were employed to manage meetings, delegate tasks, and ensure efficient workflow within weekly sprints.",
+            "url": "https://zghazanfar922.wixsite.com/unwrappd",
+            "img_url": url_for('static', filename='img/projects/unwrappd.png'),
+            "github_url": "https://github.com/VigneshSK17/unwrappd"
         },
         {
-            "title": "Music Playlist Application",
-            "description": "Created a Java application replicating streaming service operations with various features: Managed song sequences using circular linked lists for playlist navigation. Automated song library generation from CSV files for user-driven playlist customization. Implemented playlist manipulation capabilities, including merge, reverse, and shuffle functions, optimized by song popularity metrics to demonstrate intricate data structure utilization.",
-            "github_url": "https://github.com/jimmyMsh/Data-Structures/tree/master/MusicPlaylist"
+            "title": "CLI Shortener",
+            "tech": ", ".join(["Rust, MySQL, SQLx, Axum"]),
+            "description": "A highly efficient link shortening service capable of generating greater than 500 million unique shortened URLs. Ensures reliable storage of links by utilizing a local SQL database and interfacing with it using the SQLx library. Provides a user-friendly CLI to allow for multiple calls to the link shortening server simultaneously.",
+            "url": "https://github.com/VigneshSK17/cli_shortener",
+            "github_url": "https://github.com/VigneshSK17/cli_shortener"
         }
     ]
 

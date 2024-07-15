@@ -12,9 +12,11 @@
             <a href="{{ project.url if project.url else 'javascript:;' }}" class="card-link">
                 <div class="card">
                     <div class="card-image">
+                        {% if project.img_url %}
                         <figure class="image is-4x3">
                             <img src="{{ project.img_url }}" alt="Project image change this">
                         </figure>
+                        {% endif %}
                     </div>
                     <div class="media-content p-3">
                         <div class="columns">
