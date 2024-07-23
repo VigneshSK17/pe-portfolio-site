@@ -4,7 +4,8 @@ cd /root/pe-portfolio-site
 
 git fetch && git reset origin/main --hard
 
-source env/bin/activate
-pip install -r requirements.txt
+docker compose -f docker-compose.prod.yml down
+
+docker compose -f docker-compose.prod.yml up -d --build
 
 systemctl restart myportfolio
