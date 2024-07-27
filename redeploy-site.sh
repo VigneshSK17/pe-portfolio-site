@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /root/pe-portfolio-site
+cd /root/site/pe-portfolio-site
 
 git fetch && git reset origin/main --hard
 
