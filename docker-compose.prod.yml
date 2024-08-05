@@ -1,6 +1,6 @@
 services:
-  myportfolio:
-    container_name: myportfolio
+  myportfolio_site:
+    container_name: myportfolio_site
     build: .
     restart: always
     env_file:
@@ -8,8 +8,8 @@ services:
     depends_on:
       - mysql
 
-  mysql:
-    container_name: mysql
+  mysql_site:
+    container_name: mysql_site
     image: mariadb
     restart: always
     env_file:
@@ -17,8 +17,8 @@ services:
     volumes:
       - mydatabase:/var/lib/mysql
 
-  nginx:
-    container_name: nginx
+  nginx_site:
+    container_name: nginx_site
     image: jonasal/nginx-certbot
     restart: always
     environment:
@@ -31,7 +31,7 @@ services:
       - nginx_secrets:/etc/letsencrypt
       - ./user_conf.d:/etc/nginx/user_conf.d
     depends_on:
-      - myportfolio
+      - myportfolio_site
 
 volumes:
   mydatabase:
