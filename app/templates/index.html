@@ -84,6 +84,14 @@
 
 <input type="hidden" id="locations_id" value="{{ locations }}" />
 
+<div class="is-fab has-content-centered py-3">
+  <a href="/s">
+    <button class="button is-primary is-rounded">
+      <span>&#10024; Check out our link shortener!</span>
+    </button>
+  </a>
+</div>
+
 <script>
   const locationsStr = document.querySelector("#locations_id").value;
   const locations = eval(locationsStr);
@@ -100,5 +108,25 @@
     L.marker([lat, lng]).addTo(map).bindPopup(desc);
   }
 </script>
+
+<style>
+
+  #map {
+    z-index: 0;
+  }
+
+  .is-fab {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 99 !important;
+  }
+
+  .has-content-centered {
+    display: flex;
+    justify-content: center;
+  }
+
+</style>
 
 {% endblock %}
