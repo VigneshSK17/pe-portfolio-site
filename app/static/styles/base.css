@@ -1,7 +1,11 @@
 .navbar-item.is-selected, .navbar-item.is-selected:hover {
     background-color: blue; /* Blue when selected */
     color: white;
-  }
+}
+
+.navbar-item.is-primary, .navbar-item.is-primary:hover {
+	background-color: hsl(171 100% 41%);
+}
 
 .navbar-item:hover {
   background-color: lightgray; /* Light gray on hover */
